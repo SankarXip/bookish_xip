@@ -1,15 +1,21 @@
 package com.example.xipproject;
 
+import android.widget.Button;
+
 public class Asset {
 
     private int asset_image_id;
     private String asset_name;
+
+
+
 
     public Asset(int asset_image_id, String asset_name)
     {
         this.asset_image_id = asset_image_id;
         this.asset_name = asset_name;
     }
+
 
 
 

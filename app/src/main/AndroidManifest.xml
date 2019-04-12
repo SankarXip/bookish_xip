@@ -2,17 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xipproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/luncher_calender"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".availableAssets"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".empBookingActivity" />
+        <activity android:name=".empDashBoard" />
+        <activity android:name=".adminDashBoard" />
+        <activity android:name=".RegistrationPage" />
+        <activity android:name=".availableAssets" />
         <activity android:name=".OnBookingassets" />
         <activity android:name=".totalAssetList" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

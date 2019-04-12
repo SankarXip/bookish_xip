@@ -75,7 +75,7 @@ public class OnBookingassets extends AppCompatActivity  implements DatePickerDia
     }
 
     public void avilAssets(View view) {
-        Intent intent=new Intent(OnBookingassets.this,availableAssets.class);
+        Intent intent=new Intent(OnBookingassets.this,empBookingActivity.class);
         startActivity(intent);
 
     }

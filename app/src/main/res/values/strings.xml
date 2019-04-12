@@ -2,11 +2,11 @@
     <string name="app_name">Xipproject</string>
 
     <string-array name="asset_name">
-        <item>conference room1</item>
-        <item>conference room2</item>
-        <item>conference room3</item>
-        <item>conference room4</item>
-        <item>conference room5</item>
+        <item>conference \n room1</item>
+        <item>conference \n room2</item>
+        <item>conference \n room3</item>
+        <item>conference \n room4</item>
+        <item>conference \n room5</item>
         <item>projector_1</item>
         <item>projector_2</item>
         <item>projector_3</item>
