@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/login_bac_f"
+    android:background="@drawable/login"
     tools:context=".LoginPage">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="2">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="110dp"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:src="@drawable/xiphiaslogo_ed"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -31,12 +38,15 @@
         android:layout_weight="1">
 
         <LinearLayout
+            android:layout_marginTop="200dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:paddingTop="5dp"
             android:orientation="vertical"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp">
+            android:paddingRight="15dp"
+            android:paddingBottom="3dp">
 
 
             <EditText
@@ -45,11 +55,12 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:hint="Email"
-                android:textColor="#E5FDFA"
-                android:drawableStart="@drawable/mail_icon"
+
+                android:drawableStart= "@drawable/mail_icon"
                 android:inputType="textEmailAddress"
-                android:paddingBottom="15dp"
-                android:textColorHint="@color/colorAccent" />
+                android:paddingBottom="25dp"
+                android:textColorHint="#C9434549"
+                android:textColor="#0F0D0D" />
 
             <EditText
                 android:id="@+id/editTextPassword"
@@ -58,10 +69,11 @@
                 android:drawableStart="@drawable/ic_vpn_key_black_24dp"
                 android:fontFamily="sans-serif"
                 android:hint="Password"
-                android:textColor="#E5FDFA"
                 android:inputType="textPassword"
-                android:paddingBottom="15dp"
-                android:textColorHint="@color/colorAccent"
+                android:paddingBottom="25dp"
+                android:textColorHint="#C9434549"
+                android:textColor="#0F0D0D"
+                android:paddingVertical="20dp"
                 android:autofillHints="" />
 
             <Button
@@ -72,7 +84,7 @@
                 android:layout_margin="7dp"
                 android:onClick="log_in"
                 android:text="Login"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:background="@drawable/buttonshape"
                 android:shadowColor="#A8A8A8"
@@ -80,7 +92,15 @@
                 android:shadowDy="0"
                 android:shadowRadius="5"
                 android:textAllCaps="false"
-                android:textColor="#E5FDFA" />
+                android:textColor="#FFF7F7"
+                />
+            <com.google.android.gms.common.SignInButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/myGoogleButton"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+              />
 
             <TextView
                 android:id="@+id/textViewSignup"
@@ -91,7 +111,7 @@
                 android:onClick="go_to_reg"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorAccent" />
+                android:textColor="#DC0F0D0D" />
 
 
         </LinearLayout>
@@ -106,3 +126,4 @@
     </RelativeLayout>
 
 </LinearLayout>
+</ScrollView>

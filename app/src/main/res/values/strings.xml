@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Xipproject</string>
+    <string name="app_name">Xip Booking App</string>
 
     <string-array name="asset_name">
         <item>conference \n room1</item>
@@ -12,6 +12,23 @@
         <item>projector_3</item>
 
 
+    </string-array>
+
+    <string-array name="Asset_Name">
+        <item>Conference room1</item>
+        <item>Conference room2</item>
+        <item>Conference room3</item>
+        <item>Projector1</item>
+        <item>projector2</item>
+    </string-array>
+
+    <string-array name="Dept_dw">
+        <item>Choose Department</item>
+        <item>Software</item>
+        <item>Emigration</item>
+        <item>HR</item>
+        <item>Accounts</item>
+        <item>Sales</item>
     </string-array>
 
 </resources>

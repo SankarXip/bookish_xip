@@ -13,10 +13,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerAdaptor extends RecyclerView.Adapter<RecyclerAdaptor.MyViewHolder> {
+public class AdminRecyclerAdaptor extends RecyclerView.Adapter<AdminRecyclerAdaptor.MyViewHolder> {
 
     public List<Asset> Asset =new ArrayList<>();
-    public RecyclerAdaptor(List<Asset> Asset)
+    public AdminRecyclerAdaptor(List<Asset> Asset)
     {
         this.Asset = Asset;
     }
@@ -24,14 +24,14 @@ public class RecyclerAdaptor extends RecyclerView.Adapter<RecyclerAdaptor.MyView
 
     @NonNull
     @Override
-    public RecyclerAdaptor.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent , int viewType) {
+    public AdminRecyclerAdaptor.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent , int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout,parent,false);
 
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdaptor.MyViewHolder holder , int position) {
+    public void onBindViewHolder(@NonNull AdminRecyclerAdaptor.MyViewHolder holder , int position) {
 
            holder.assetText.setText(Asset.get(position).getAsset_name());
             holder.assetImage.setImageResource(Asset.get(position).getAsset_image_id());

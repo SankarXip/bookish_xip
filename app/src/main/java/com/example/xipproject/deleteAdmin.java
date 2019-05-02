@@ -10,27 +10,45 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
-public class adminDashBoard extends AppCompatActivity {
+public class deleteAdmin extends AppCompatActivity {
 
     private Toolbar toolbar;
 
+    EditText Id;
+    DatabaseHelper mDatabaseHelper;
+    Button deleteBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_dash_board);
-
+        setContentView(R.layout.activity_delete_admin);
+       Id=(EditText)findViewById(R.id.delet_id);
+       deleteBtn=(Button)findViewById(R.id.deleteBtn);
+        mDatabaseHelper = new DatabaseHelper(this);
         toolbar=findViewById(R.id.tool_Bar);
         setSupportActionBar(toolbar);
+
+        DeleteData();
+    }
+    public void DeleteData() {
+        deleteBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Integer deletedRows = mDatabaseHelper.deleteData(Id.getText().toString());
+                        if(deletedRows > 0)
+                            Toast.makeText(deleteAdmin.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(deleteAdmin.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
     }
 
 
-    public void total_assets(View view) {
-        Intent intent=new Intent(adminDashBoard.this,totalAssetList.class);
-        startActivity(intent);
-
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -47,19 +65,19 @@ public class adminDashBoard extends AppCompatActivity {
         {
             case R.id.logout_id:
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(adminDashBoard.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(deleteAdmin.this);
                 builder.setMessage("Do you want to Log out from this app??").setCancelable(false)
                         .setPositiveButton("Yes" , new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog , int which) {
-                                startActivity(new Intent(adminDashBoard.this , LoginPage.class));
-                                Toast.makeText(adminDashBoard.this,"You have Logged out successfully.",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(deleteAdmin.this , LoginPage.class));
+                                Toast.makeText(deleteAdmin.this,"You have Logged out successfully.",Toast.LENGTH_SHORT).show();
 
                             }
                         }).setNegativeButton("No" , new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog , int which) {
-                      dialog.cancel();
+                        dialog.cancel();
                     }
                 });
 
@@ -78,19 +96,5 @@ public class adminDashBoard extends AppCompatActivity {
         }
 
     }
-
-
-    public void Bookedassets(View view) {
-        startActivity(new Intent(this , ListData.class));
-    }
-
-    public void update(View view) {
-        startActivity(new Intent(this , updateAdminActivity.class));
-    }
-
-    public void delete(View view) {
-        startActivity(new Intent(this , deleteAdmin.class));
-    }
-
 
 }

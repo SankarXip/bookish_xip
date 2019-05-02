@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bac"
+    tools:context=".deleteAdmin">
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:hint="Enter the Id"
+        android:id="@+id/delet_id"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="delete"
+        android:textSize="15dp"
+        android:textColor="#E70C0C"
+        android:layout_marginLeft="45dp"
+        android:background="@drawable/buttonshape"
+        android:layout_marginTop="10dp"
+        android:id="@+id/deleteBtn"/>
+
+</LinearLayout>

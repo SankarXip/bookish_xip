@@ -26,8 +26,8 @@ public class SliderAdapter extends PagerAdapter  {
 
     public String[] slide_headings = {
             "INNOVATION BEYOND IMAGINATION...",
-            "STAY PEACEFUL",
-            "ENJOY YOUR STAY"
+            "STAY IN LAP OF TECHNOLOGY",
+            "PLAN A LIFE ON FOREIGN LAND WITH XIPHIAS!"
     };
 
     public String[] slide_descs = {

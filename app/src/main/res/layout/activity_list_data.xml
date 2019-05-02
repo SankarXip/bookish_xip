@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".totalAssetList"
-    android:background="@drawable/bac"
     android:orientation="vertical"
-    android:id="@+id/root_view">
-
+    android:background="@drawable/back_ab"
+    tools:context=".ListData">
     <include
         layout="@layout/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="visible" />
-
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        android:id="@+id/m_recyclerView"
+        android:layout_marginTop="55dp"/>
+
+</RelativeLayout>

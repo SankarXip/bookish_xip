@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".empBookingActivity" />
+        <activity android:name=".deleteAdmin" />
+        <activity android:name=".updateAdminActivity" />
         <activity android:name=".empDashBoard" />
+        <activity android:name=".ListData" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".adminDashBoard" />
         <activity android:name=".RegistrationPage" />
-        <activity android:name=".availableAssets" />
-        <activity android:name=".OnBookingassets" />
         <activity android:name=".totalAssetList" />
         <activity android:name=".LoginPage">
             <intent-filter>
